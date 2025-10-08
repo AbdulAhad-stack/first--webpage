@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header + Navbar */
+.head-container {
+  background: linear-gradient(to left, red, rgb(229, 123, 117));
+  color: azure;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+nav ul.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul.form li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav ul.form li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.outer-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f13434;
+  padding: 40px 10px;
+}
+
+.centered-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 80%;
+  max-width: 900px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.centered-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+main h2, h3 {
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Lists — centered bullets & numbers */
+ul, ol {
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0;
+  margin: 10px auto;
+}
+
+ul li, ol li {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to left, rgb(229, 123, 117), red);
+  color: azure;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer h1 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+footer .form {
+  justify-content: center;
+  gap: 15px;
+}
+
+/* -------- Responsive -------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .centered-content {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav ul.form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .centered-content {
+    width: 95%;
+    padding: 15px;
+  }
+}
